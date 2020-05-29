@@ -10,8 +10,17 @@ namespace PropertyPrac
     class Box
     {
         const int SIZE_DEFAULT = 1;
-        int width;
-        int height;
+        private int width;
+        private int height;
+
+        public int HEight
+        {
+            get { return height; }
+            set
+            {
+                this.height = IsPositive(height);
+            }
+        }
 
         public Box(int width, int height)
         {

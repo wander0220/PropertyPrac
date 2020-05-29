@@ -14,7 +14,7 @@ namespace PropertyPrac
             //int height = 0;
             Box box = new Box(10, 10);
             Console.WriteLine(box.Area());
-            box = new Box(-5, 10);
+            box.SetWidth(-3);
             Console.WriteLine(box.Area());
         }
     }
