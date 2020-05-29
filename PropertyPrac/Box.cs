@@ -9,6 +9,8 @@ namespace PropertyPrac
 {
     class Box
     {
+        const int WIDTH_DEFAULT = 1;
+        const int HEIGHT_DEFAULT = 1;
         int width;
         int height;
 
@@ -21,6 +23,8 @@ namespace PropertyPrac
             }
             else
             {
+                this.width = 1;
+                this.height = 1;
                 Console.WriteLine("매개변수 is 양수... no 음수...");
             }
         }
@@ -28,5 +32,39 @@ namespace PropertyPrac
         {
             return this.width * this.height;
         }
+
+        public int GetWidth()
+        {
+            return this.width;
+        }
+        public int GetHeight()
+        {
+            return this.height;
+        }
+        public void SetWidth(int width)
+        {
+            if (width > 0)
+            {
+                this.width = width;
+            }
+            else
+            {
+                this.width = WIDTH_DEFAULT;
+                Console.WriteLine("매개변수 is 양수... no 음수...");
+                Console.WriteLine("width",WIDTH_DEFAULT,"height",HEIGHT_DEFAULT," 1인 객체로 수정합니다.");
+            }
+        }
+        public void SetHeight(int height)
+        {
+            if (height > 0)
+            {
+                this.height = height;
+            }
+            else
+            {
+                this.height = HEIGHT_DEFAULT;
+                Console.WriteLine("매개변수 is 양수... no 음수...");
+                Console.WriteLine("width", WIDTH_DEFAULT, "height", HEIGHT_DEFAULT, " 1인 객체가 수정합니다.");
+            }
+        }
     }
-}
